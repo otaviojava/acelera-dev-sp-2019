@@ -1,24 +1,22 @@
-# Primeira aula
+# Segunda aula
 
 ## Grade
 
 1. Sintaxe da Linguagem Java - 
-   - Fundamentos da linguagem
-   - Variáveis
-   - Operadores
-   - Controle de fluxo
+   - Herança
+   - Encapsulamento
+
+   
 
 2. Orientação a Objetos com Java
-   - Classes & objetos
-   - Encapsulamento
-   - Construtores
-   - Polimorfismo
+   - DDD
+   - Builders
 
-3. Novas API com o Java 8
-   - Motivação
-   - Stream API
-   - Lambda
-   - Novos recursos na API de Collection
+3. Testes de Unidade
+   - Testes de Unidade
+   - O que é JUnit
+   - JMockito
+   - 
 
 ## Exercícios
 
