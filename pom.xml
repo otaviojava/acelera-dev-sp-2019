@@ -19,7 +19,7 @@
 
     <modules>
         <module>aula-1</module>
-        <!--module>aula-2</module-->
+        <-module>aula-2</module-->
     </modules>
 
     <dependencies>
