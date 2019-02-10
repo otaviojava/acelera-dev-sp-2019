@@ -30,5 +30,7 @@ Referências:
 ](https://www.devmedia.com.br/principais-conceitos-da-programacao-orientada-a-objetos/32285)
 * [Java/Características de linguagens orientadas a objetos
 ](https://pt.wikibooks.org/wiki/Java/Caracter%C3%ADsticas_de_linguagens_orientadas_a_objetos)
+*
 * [Novidades do JUnit 5 - parte 1](https://engenharia.elo7.com.br/novidades-do-junit-5-parte-1/)
 * [Novidades do JUnit 5 - parte 2](https://engenharia.elo7.com.br/novidades-do-junit-5-parte-2/)
+* [Documentação Referência](https://junit.org/junit5/docs/current/user-guide/)
