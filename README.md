@@ -6,6 +6,24 @@ Esse projeto é destinado ao exemplo de código que serão realizados nas aulas 
 * [Aula 1](https://github.com/otaviojava/acelera-dev-sp-2019/tree/master/aula-1)
 * [Aula 2](https://github.com/otaviojava/acelera-dev-sp-2019/tree/master/aula-2)
 
+
+## Requisitos
+
+* Java SDK 8+
+* IntelliJ or Eclipse
+* Maven 3
+* Git
+
+
+## Instalação
+
+
+```bash
+git clone git@github.com:otaviojava/acelera-dev-sp-2019.git
+cd acelera-dev-sp-2019.git
+mvn clean install
+```
+
 ## Bons livros para leitura
 
 * [Java Efetivo 3 edição](https://www.amazon.com.br/Java-Efetivo-Melhores-Pr%C3%A1ticas-Plataforma/dp/8550804622/ref=sr_1_fkmr0_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&keywords=Java+Efetivo+3+edi%C3%A7%C3%A3o&qid=1549546162&sr=8-1-fkmr0)
