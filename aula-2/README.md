@@ -22,6 +22,8 @@
 
 * Criar testes para o plano de estoque
 * Criar testes para as operações
+* Um time de futbol (será explicado durante a aula)
+* Criando um carro inteligente
 
 
 Referências:
