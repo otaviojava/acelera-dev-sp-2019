@@ -6,6 +6,7 @@
    - Herança
    - Encapsulamento
    - Exceção
+   - Enum
 
    
 
