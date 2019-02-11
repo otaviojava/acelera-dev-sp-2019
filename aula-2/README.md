@@ -38,3 +38,4 @@ Referências:
 * [Novidades do JUnit 5 - parte 2](https://engenharia.elo7.com.br/novidades-do-junit-5-parte-2/)
 * [Documentação Referência](https://junit.org/junit5/docs/current/user-guide/)
 * [Unit tests with Mockito - Tutorial](http://www.vogella.com/tutorials/Mockito/article.html)
+* [Refatorando com padrões de projeto](https://www.casadocodigo.com.br/products/livro-refatoracao-java)
