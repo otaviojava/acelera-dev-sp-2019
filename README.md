@@ -5,6 +5,7 @@ Esse projeto é destinado ao exemplo de código que serão realizados nas aulas 
 
 * [Aula 1](https://github.com/otaviojava/acelera-dev-sp-2019/tree/master/aula-1)
 * [Aula 2](https://github.com/otaviojava/acelera-dev-sp-2019/tree/master/aula-2)
+* [Aula 3](https://github.com/otaviojava/acelera-dev-sp-2019/tree/master/aula-3)
 
 
 ## Requisitos
