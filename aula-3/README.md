@@ -1,13 +1,11 @@
-# Segunda aula
+# Terceira aula
 
 ## Grade
 
-1. Sintaxe da Linguagem Java - 
-   - Herança
-   - Encapsulamento
-   - Exceção
+1. Spring 
+   - Spring Rest
+   - Injeção de dependência
 
-   
 
 2. Orientação a Objetos com Java
    - DDD
@@ -20,20 +18,16 @@
 
 ## Exercícios
 
-* Criar testes para o plano de estoque
-* Criar testes para as operações
-* Um time de futbol (será explicado durante a aula)
-* Criando um carro inteligente (será explicado durante a aula)
+* Criar recurso para Jogadores de Football
+* Criar recurso para o controle de estoque
+
 
 
 Referências:
 
-* [Principais conceitos da Programação Orientada a Objetos
-](https://www.devmedia.com.br/principais-conceitos-da-programacao-orientada-a-objetos/32285)
-* [Java/Características de linguagens orientadas a objetos
-](https://pt.wikibooks.org/wiki/Java/Caracter%C3%ADsticas_de_linguagens_orientadas_a_objetos)
-* [JUnit 5 - Test Drive - Parte 1](https://www.infoq.com/br/articles/JUnit-5-Early-Test-Drive)
-* [Novidades do JUnit 5 - parte 1](https://engenharia.elo7.com.br/novidades-do-junit-5-parte-1/)
-* [Novidades do JUnit 5 - parte 2](https://engenharia.elo7.com.br/novidades-do-junit-5-parte-2/)
-* [Documentação Referência](https://junit.org/junit5/docs/current/user-guide/)
-* [Unit tests with Mockito - Tutorial](http://www.vogella.com/tutorials/Mockito/article.html)
+* [Spring MVC Caelum](https://www.caelum.com.br/apostila-java-web/spring-mvc/)
+* [Spring Boot](https://www.casadocodigo.com.br/products/livro-spring-boot)
+* [Spring MVC](https://www.casadocodigo.com.br/products/livro-spring-mvc)
+* [Vire o jogo com Spring Framework](https://www.casadocodigo.com.br/products/livro-spring-framework)
+* [10 Best Practices for Better RESTful API](https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+* [RESTful API Designing guidelines — The best practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
