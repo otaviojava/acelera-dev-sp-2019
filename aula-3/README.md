@@ -14,6 +14,8 @@
 3. Bancos de dados
    - JPA
    - Realizando Query
+   - Repository
+   - Repository vs RestController
 
 ## Exercícios
 
