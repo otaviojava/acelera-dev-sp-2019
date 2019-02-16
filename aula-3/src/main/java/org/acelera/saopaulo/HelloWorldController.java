@@ -1,22 +1,57 @@
 package org.acelera.saopaulo;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
+
+@RestController
+@RequestMapping("greetings")
 public class HelloWorldController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @GetMapping("/hello-world")
+    private Map<Long, Greeting> storage = new HashMap<>();
+
+    @GetMapping
     @ResponseBody
-    public Greeting sayHello(@RequestParam(name="name", required=false, defaultValue="Stranger") String name) {
+    public Greeting sayHello(@RequestParam(name = "name", required = false, defaultValue = "Stranger") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
+
+    @PostMapping
+    public String save(@RequestBody Greeting greeting) {
+        storage.put(greeting.getId(), greeting);
+        return "Saved " + greeting.getContent();
+    }
+
+    @GetMapping(value = "/{id}", produces = "application/json")
+    public Greeting getBook(@PathVariable long id) {
+        return storage.get(id);
+    }
+
+    @PutMapping(value = "/{id}", produces = "application/json")
+    public Greeting update(@PathVariable long id, @RequestBody Greeting greeting) {
+        return storage.computeIfPresent(id, (k,v) -> greeting);
+    }
+
+
+    @DeleteMapping(value = "/{id}", produces = "application/json")
+    public Greeting delete(@PathVariable long id) {
+        return storage.remove(id);
+    }
+
+
 
 }
