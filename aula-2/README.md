@@ -27,6 +27,25 @@
 * Criando um carro inteligente (será explicado durante a aula)
 
 
+### Time de Futebol:
+
+Considerando que um jogador tem: 
+* Nome
+* Posição (goleiro, defesa e ataque)
+* Número de gols
+
+E um time:
+* Tem um nome
+* Jogadores
+
+Resolva:
+
+* Quais jogadores têm direito ao gol no fantástico?
+* Quem é o artilheiro do time?
+* Ordene os jogadores pelo número de gols
+* Agrupe os jogadores pela posição
+
+
 Referências:
 
 * [Principais conceitos da Programação Orientada a Objetos
