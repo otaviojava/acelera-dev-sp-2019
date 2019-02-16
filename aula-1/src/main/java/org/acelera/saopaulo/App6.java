@@ -11,10 +11,10 @@ public class App6 {
 		Operacao<Integer, Integer> subtracao = (a, b) -> {
 			return a - b;
 		};
-		soma.operar(5, 6);
+		subtracao.operar(5, 6);
 
 		Operacao<Integer, Integer> multiplicacao = (a, b) -> {return a * b;	};
-		soma.operar(5, 6);
+		multiplicacao.operar(5, 6);
 
 		Operacao<Integer, Integer> divisao = (a, b) -> {
 			if (b != 0) {
