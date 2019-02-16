@@ -55,3 +55,7 @@ public class HelloWorldController {
 
 
 }
+// curl -i -X POST -H "Content-Type: application/json" -d '{"id":1,"content":"Hello, Stranger!"}' localhost:8080/greetings/
+// curl localhost:8080/greetings/1
+// curl -i -X PUT -H "Content-Type: application/json" -d '{"id":1,"content":"Hello, Update!"}' localhost:8080/greetings/1
+// curl -i -X DELETE localhost:8080/greetings/1
