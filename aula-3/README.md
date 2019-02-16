@@ -27,6 +27,7 @@
 
 Referências:
 
+* [Getting Started With Spring Boot and Microservices](https://dzone.com/refcardz/getting-started-with-spring-boot-and-microservices?chapter=1)
 * [Injeção de dependências com Spring](https://blog.algaworks.com/injecao-de-dependencias-com-spring/)
 * [Spring MVC Caelum](https://www.caelum.com.br/apostila-java-web/spring-mvc/)
 * [Spring Boot](https://www.casadocodigo.com.br/products/livro-spring-boot)
