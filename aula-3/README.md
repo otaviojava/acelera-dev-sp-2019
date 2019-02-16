@@ -2,16 +2,17 @@
 
 ## Grade
 
-1. Spring 
+1. Rest 
    - Spring Rest
    - Injeção de dependência
 
 
-2. Orientação a Objetos com Java
-   - DDD
-   - Builders
+2. Spring
+   - Injeção de dependência
+   - Motivação
+   - 
 
-3. Testes de Unidade
+3. 
    - Testes de Unidade
    - O que é JUnit
    - JMockito
@@ -25,6 +26,7 @@
 
 Referências:
 
+* [Injeção de dependências com Spring](https://blog.algaworks.com/injecao-de-dependencias-com-spring/)
 * [Spring MVC Caelum](https://www.caelum.com.br/apostila-java-web/spring-mvc/)
 * [Spring Boot](https://www.casadocodigo.com.br/products/livro-spring-boot)
 * [Spring MVC](https://www.casadocodigo.com.br/products/livro-spring-mvc)
