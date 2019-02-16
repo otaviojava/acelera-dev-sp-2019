@@ -15,15 +15,6 @@ public class PessoaTest {
 
     @Test
     public void deveCriarUmaInstancia() {
-        Pessoa pessoa = Pessoa.builder()
-                .withNome("Otavio")
-                .withSobreNome("Santana")
-                .withIdade(23)
-                .withCidade("Salvador")
-                .build();
-
-        assertNotNull(pessoa);
-        assertEquals("Otavio", pessoa.getNome());
 
     }
 
@@ -31,12 +22,6 @@ public class PessoaTest {
     public void nomeDeveSerObrigatorio() {
         String nome = null;
 
-        nome.toString();
-        assertThrows(NullPointerException.class,
-                () -> {
-                    Pessoa pessoa = Pessoa.builder()
-                            .withNome(null).build();
-                });
 
 
     }
