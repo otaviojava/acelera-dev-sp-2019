@@ -3,7 +3,7 @@ package org.acelera.saopaulo.soccer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Objects;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 
@@ -19,9 +19,6 @@ public class Time {
     }
 
     public List<Jogador> getJogadores() {
-        if(jogadores == null) {
-            return Collections.emptyList();
-        }
         return Collections.unmodifiableList(jogadores);
     }
 
@@ -36,4 +33,12 @@ public class Time {
     public int total() {
         return jogadores.size();
     }
+
+
+    public List<Jogador> getFantastico() {
+        return jogadores.stream()
+                .filter(j -> j.getGols()>= 3)
+                .collect(Collectors.toList());
+    }
+
 }
