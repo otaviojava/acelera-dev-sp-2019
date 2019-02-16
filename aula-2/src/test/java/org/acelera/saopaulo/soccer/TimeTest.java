@@ -90,8 +90,40 @@ class TimeTest {
         assertEquals("Tafarel", convertToName(jogaborbyPosicao.get(GOLEIRO)));
         assertEquals("Bobo,Jorge,jose", convertToName(jogaborbyPosicao.get(DEFESA)));
         assertEquals("Lima,Neymar", convertToName(jogaborbyPosicao.get(ATAQUE)));
+    }
+
+    @Test
+    public void deveRetornarOArtilheiro() {
+        Time bahia = Time.of("Bahia");
+
+        Jogador bobo = mock("Bobo", 3);
+        Jogador lima = mock("Lima", 5);;
+        Jogador neymar = mock("Neymar", 1);
+
+        bahia.adicionar(bobo);
+        bahia.adicionar(lima);
+        bahia.adicionar(neymar);
+        Jogador artilheiro = bahia.getArtilheiro();
+        assertEquals("Lima", artilheiro.getNome());
+        assertEquals(5, artilheiro.getGols());
+    }
 
 
+    @Test
+    public void deveRetornarOrdenadoPorGols() {
+
+        Time bahia = Time.of("Bahia");
+
+        Jogador bobo = mock("Bobo", 3);
+        Jogador lima = mock("Lima", 5);
+        Jogador neymar = mock("Neymar", 1);
+
+        bahia.adicionar(bobo);
+        bahia.adicionar(lima);
+        bahia.adicionar(neymar);
+
+        List<Jogador> jogadores = bahia.getJogadoresOrderByGols();
+        assertEquals("Lima,Bobo,Neymar", convertToName(jogadores));
     }
 
     private String convertToName(List<Jogador> jogadores) {
