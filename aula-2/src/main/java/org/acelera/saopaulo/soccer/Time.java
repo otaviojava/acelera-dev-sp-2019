@@ -3,9 +3,11 @@ package org.acelera.saopaulo.soccer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.groupingBy;
 
 public class Time {
 
@@ -41,4 +43,8 @@ public class Time {
                 .collect(Collectors.toList());
     }
 
+    public Map<Posicao, List<Jogador>> getJogadorByPosicao() {
+        return jogadores.stream()
+                .collect(groupingBy(Jogador::getPosicao));
+    }
 }
