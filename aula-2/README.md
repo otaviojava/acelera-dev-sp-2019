@@ -33,6 +33,8 @@ Considerando que um jogador tem:
 * Nome
 * Posição (goleiro, defesa e ataque)
 * Número de gols
+* Cidade
+* Pais
 
 E um time:
 * Tem um nome
