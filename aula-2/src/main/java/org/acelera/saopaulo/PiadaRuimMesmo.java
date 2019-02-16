@@ -1,8 +1,13 @@
 package org.acelera.saopaulo;
 
-public class PiadaRuimHeranca extends PiadaRuim {
+public class PiadaRuimMesmo extends PiadaRuim {
 
-    public PiadaRuimHeranca() {
+    public PiadaRuimMesmo() {
         this.profissao = "Policial";
+    }
+
+    @Override
+    public String darRisada() {
+        return super.darRisada() +  "lol";
     }
 }

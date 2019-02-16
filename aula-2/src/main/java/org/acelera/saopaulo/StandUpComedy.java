@@ -1,4 +1,6 @@
 package org.acelera.saopaulo;
 
-public class StandUpComedy {
+public interface StandUpComedy {
+
+    String darRisada();
 }

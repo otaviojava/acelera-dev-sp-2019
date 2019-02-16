@@ -1,4 +1,6 @@
 package org.acelera.saopaulo;
 
-public class ReacaoPiada {
+public interface ReacaoPiada {
+
+    String reagir();
 }
