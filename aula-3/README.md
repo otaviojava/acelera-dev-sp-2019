@@ -10,18 +10,17 @@
 2. Spring
    - Injeção de dependência
    - Motivação
-   - 
 
-3. 
-   - Testes de Unidade
-   - O que é JUnit
-   - JMockito
+3. Bancos de dados
+   - JPA
+   - Realizando Query
 
 ## Exercícios
 
 * Criar recurso para Jogadores de Football
 * Criar recurso para o controle de estoque
-
+* Realizar a modelagem dos Jogadores de Football no banco de dados
+* Realizar a modelagem dos Jogadores de controle de estoque
 
 
 Referências:
@@ -36,3 +35,6 @@ Referências:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [The Spring @Controller and @RestController Annotations](https://www.baeldung.com/spring-controller-vs-restcontroller)
+* [Bancos de Dados Relacionais](https://www.devmedia.com.br/bancos-de-dados-relacionais/20401)
+* [Bancos de dados e JDBC](https://www.caelum.com.br/apostila-java-web/bancos-de-dados-e-jdbc/#a-conexo-em-java)
+
