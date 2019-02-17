@@ -10,7 +10,9 @@
     <properties>
         <maven.compile.targetLevel>1.8</maven.compile.targetLevel>
         <maven.compile.sourceLevel>1.8</maven.compile.sourceLevel>
-        <maven.compile.version>3.5.1</maven.compile.version>
+        <maven.compile.version>3.8.0</maven.compile.version>
+        <maven.javadoc.version>3.0.1</maven.javadoc.version>
+        <maven.source.version>3.0.1</maven.source.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.4.0-RC2</junit.version>
         <mockito.verson>2.24.0</mockito.verson>
@@ -69,6 +71,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.version}</version>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -81,6 +84,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.version}</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
