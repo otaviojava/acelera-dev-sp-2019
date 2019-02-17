@@ -10,30 +10,25 @@ public class App3 {
         for (int index = 1; index <= 1_000; index++) {
             numeros.add(index);
         }
-        for (Integer numero : numeros) {
-            System.out.println(numero);
-        }
+        
+        numeros.forEach(System.out::println);
 
         List<Integer> pares = new ArrayList<>();
         List<Integer> impares = new ArrayList<>();
+        
+        numeros.forEach(x -> {
+        	if(x % 2 == 0) {
+        		pares.add(x);
+        	}else {
+        		impares.add(x);
+        	}
+        });
 
-        for (int index = 1; index <= 1_000; index++) {
-            if(index % 2 == 0) {
-                pares.add(index);
-            } else {
-                impares.add(index);
-            }
-        }
 
         System.out.println("pares ");
-        for (Integer pare : pares) {
-            System.out.println(pare);
-        }
-
-        impares.forEach(i -> System.out.println(i));
-        impares.forEach(System.out::println);
-        for (Integer impar : impares) {
-            System.out.println(impar);
-        }
+        pares.forEach(System.out::println);
+        
+        System.out.println("impares ");
+        impares.forEach(System.out::println);        
     }
 }

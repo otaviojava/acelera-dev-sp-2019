@@ -1,6 +1,6 @@
 package org.acelera.saopaulo;
 
-public interface Operacao {
-
-    int operar(int a, int b);
+@FunctionalInterface
+public interface Operacao<T,U> {
+    int operar(T a, U b);
 }

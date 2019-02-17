@@ -25,16 +25,9 @@ public class App2 {
         produtos.add("Caneca");
 
         System.out.println("frutas: ");
-        for (String fruta : frutas) {
-            System.out.println(fruta);
-        }
-
+        frutas.forEach(System.out::println);
+        produtos.forEach(System.out::println);
         System.out.println("Produtos: ");
-        for (String produto : produtos) {
-            System.out.println(produto);
-        }
-
-
-
+        
     }
 }

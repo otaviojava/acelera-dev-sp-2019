@@ -1,9 +1,7 @@
 package org.acelera.saopaulo;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class App4 {
 
@@ -23,11 +21,10 @@ public class App4 {
         System.out.println("quantidade de banana: " +
                 estoque.get("Banana"));
 
-        for (Entry<String, Integer> tupla : estoque.entrySet()) {
-            System.out.println("chave: " + tupla.getKey());
-            System.out.println("Valor: " + tupla.getValue());
-        }
-
+        estoque.forEach((k,v) -> {
+        	System.out.println("Chave: " + k.toString() +  "Valor: " + v.toString());
+        });
+        
         Integer valorBanana = estoque.get("Banana");
         estoque.put("Banana", valorBanana - 2);
         estoque.put("Banana", estoque.get("Banana") - 2);
