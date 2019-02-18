@@ -36,7 +36,6 @@ class TimeTest {
 
     @BeforeEach
     void setUp() {
-
         Jogador bobo = mock("Bobo", 3, DEFESA);
         Jogador lima = mock("Lima", 5);
         Jogador neymar = mock("Neymar", 1);
