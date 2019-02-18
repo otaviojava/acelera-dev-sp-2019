@@ -1,21 +1,17 @@
 package org.acelera.saopaulo;
 
-import java.time.LocalTime;
-import java.util.Calendar;
-import java.util.Collections;
-
 public class App {
 
     public static void main(String[] args) {
         PiadaRuim piadaRuim = new PiadaRuim();
         System.out.println(piadaRuim.contar());
-        piadaRuim.variael = "novo valor";
-        System.out.println(PiadaRuim.variael);
+        piadaRuim.variavel = "novo valor";
+        System.out.println(PiadaRuim.variavel);
 
         PiadaRuimMesmo heranca = new PiadaRuimMesmo();
         System.out.println(heranca.contar());
-        PiadaRuim.variael = "mudando o valor";
-        System.out.println(PiadaRuim.variael);
+        PiadaRuim.variavel = "mudando o valor";
+        System.out.println(PiadaRuim.variavel);
         TipoPiada.BOA.reagir();
     }
 }

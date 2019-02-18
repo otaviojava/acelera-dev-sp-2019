@@ -4,11 +4,11 @@ public class PiadaRuim implements Piada, StandUpComedy {
 
     protected String profissao = "Engenheiro";
 
-    public static String variael = "aqui";
+    public static String variavel = "aqui";
 
     @Override
     public String contar() {
-        return profissao + " Civil ,ha ha ha";
+        return profissao + " Civil, ha ha ha";
     }
 
     @Override
