@@ -30,6 +30,7 @@ import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.hamcrest.Matchers.isEmptyString;
 import static org.hamcrest.Matchers.isIn;
 import static org.hamcrest.Matchers.not;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class TimeTest {
@@ -160,6 +161,14 @@ class TimeTest {
         List<Jogador> jogadores = bahia.getJogadoresOrderByGols();
         assertThat(jogadores, contains(matchByNome("Lima", "Bobo", "Neymar")));
     }
+    
+    @Test
+    @DisplayName("Remove jogador pelo nome")
+    void removeJogador() {
+    	boolean esperado = true;
+        assertEquals(esperado, bahia.removeJogador("Bobo"));
+    }
+    
 
     private Jogador mock(String nome, int gols) {
         return mock(nome, gols, ATAQUE);

@@ -65,4 +65,12 @@ public class Time {
                 .sorted(Comparator.comparing(Jogador::getGols).reversed())
                 .collect(Collectors.toList());
     }
+    
+    public boolean removeJogador(String nome) {			
+		if (this.jogadores.indexOf(nome) != -1) {
+			throw new  RuntimeException("Jogadores nao existe no time.");
+		}		
+		return jogadores.removeIf(j -> j.getNome().equals(nome));
+	}
+    
 }
