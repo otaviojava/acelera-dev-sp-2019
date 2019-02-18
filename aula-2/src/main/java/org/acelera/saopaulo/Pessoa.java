@@ -1,7 +1,5 @@
 package org.acelera.saopaulo;
 
-import java.util.Objects;
-
 public class Pessoa {
 
     //default que visivel
