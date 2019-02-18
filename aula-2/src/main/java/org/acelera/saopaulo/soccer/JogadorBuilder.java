@@ -1,7 +1,5 @@
 package org.acelera.saopaulo.soccer;
 
-import java.util.Objects;
-
 public class JogadorBuilder {
     private String nome;
     private String cidade;

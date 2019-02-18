@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class JogadorTest {
 
     private Jogador jogador;
@@ -32,19 +34,19 @@ class JogadorTest {
                 .withCidade("Salvador")
                 .withPais("Brasil").withGols(10)
                 .withPosicao(Posicao.ATAQUE).build();
-        Assertions.assertNotNull(neymar);
+        assertNotNull(neymar);
     }
 
     @Test
     @DisplayName("Dado um jogador que fez 10 gols, no gol deve aparecer 11")
     public void deveFazerGol() {
-        Assertions.assertEquals(10, jogador.getGols());
+        assertEquals(10, jogador.getGols());
         jogador.fezGol();
-        Assertions.assertEquals(11, jogador.getGols());
+        assertEquals(11, jogador.getGols());
     }
 
     @Test
     public void fazNada() {
-        Assertions.assertEquals(10, jogador.getGols());
+        assertEquals(10, jogador.getGols());
     }
 }
