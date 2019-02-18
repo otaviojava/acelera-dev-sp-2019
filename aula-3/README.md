@@ -2,16 +2,21 @@
 
 ## Grade
 
-1. Rest 
+1. Orientação a Objetos com Java
+   - Camadas
+   - Classe abstrata
+   - Package by feature vs Package by layer
+   
+2. Rest 
    - Spring Rest
    - Injeção de dependência
 
 
-2. Spring
+3. Spring
    - Injeção de dependência
    - Motivação
 
-3. Bancos de dados
+4. Bancos de dados
    - JPA
    - Realizando Query
    - Repository
