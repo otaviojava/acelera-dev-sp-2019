@@ -22,6 +22,33 @@
    - Repository
    - Repository vs RestController
 
+   
+## Docker
+Criar containers com os bancos de dados (MongoDB e MySQL) :
+```
+docker-compose up --build
+```
+
+Criar o container de apenas um dos serviços:
+```
+docker-compose up <nome do serviço>
+
+exemplo:
+docker-compose up mysqldb
+docker-compose up mongodb
+  ```
+Outros comandos úteis do Docker :
+```
+docker container ls                                # Lista todos os containers rodando
+docker container ls -a                             # Lista todos os containers, mesmo o que não estão rodando
+docker container stop <hash>                       # Para a execução do container
+docker container rm <hash>                         # Remove o container da máquina
+docker container rm $(docker container ls -a -q)   # Remove todos os containers
+docker image ls -a                                 # Lista todas as imagens da máquina
+docker image rm <image id>                         # Remove uma imagem da máquina
+docker image rm $(docker image ls -a -q)           # Remove todas as imagens da máquina
+```
+
 ## Exercícios
 
 * Criar recurso para Jogadores de Football
