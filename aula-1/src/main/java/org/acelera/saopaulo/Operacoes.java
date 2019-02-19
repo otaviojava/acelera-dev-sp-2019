@@ -18,12 +18,12 @@ public class Operacoes{
 	}
 	
 	public static int divisao(int a, int b) {
-		Operacao<Integer, Integer> divisao = (x,y) -> {	return (y==0) ? 0 : (x/y);};
-//			if(y == 0)
-//				throw new ArithmeticException("Não é possível realizar divisões por zero !");
-//			else
-//				return x/y;
-//			};
+		Operacao<Integer, Integer> divisao = (x,y) -> {
+			if(y == 0)
+				throw new ArithmeticException("Não é possível realizar divisões por zero !");
+			else
+				return x/y;
+			};
 		return divisao.operar(a,b);
 	}
 	
