@@ -3,18 +3,25 @@ package br.com.codenation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Random;
-
 @Service
 public class PiadaServiceImpl implements PiadasService{
 
     @Autowired
-    PiadasRepository repository;
+    PerguntasRespostasRepository perguntasRespostasrepository;
+
+    @Autowired
+    TrocadilhoRepository trocadilhoRepository;
 
     @Override
-    public Piada getPiadasRandom() {
-        Long count = repository.count();
-        return repository.findById(randomIndex(count)).get();
+    public PerguntaResposta getPerguntasRespostasRandom() {
+        Long count = perguntasRespostasrepository.count();
+        return perguntasRespostasrepository.findById(randomIndex(count)).get();
+    }
+
+    @Override
+    public Piada getTrocadilhoRandom() {
+        Long count = trocadilhoRepository.count();
+        return trocadilhoRepository.findById(randomIndex(count)).get();
     }
 
     private Long randomIndex(Long rightLimit) {

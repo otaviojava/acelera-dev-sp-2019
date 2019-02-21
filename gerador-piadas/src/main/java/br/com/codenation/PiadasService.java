@@ -2,5 +2,9 @@ package br.com.codenation;
 
 public interface PiadasService {
 
-    Piada getPiadasRandom();
+    Piada getPerguntasRespostasRandom();
+
+    Piada getTrocadilhoRandom();
+
+
 }
