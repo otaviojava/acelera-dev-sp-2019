@@ -8,16 +8,16 @@ public class Pessoa {
     //
     private String nome;
 
-    private String sobreNome;
+    private String sobrenome;
 
     private int idade;
 
     private String cidade;
 
 
-    protected Pessoa(String nome, String sobreNome, int idade, String cidade) {
+    protected Pessoa(String nome, String sobrenome, int idade, String cidade) {
         this.nome = nome;
-        this.sobreNome = sobreNome;
+        this.sobrenome = sobrenome;
         this.idade = idade;
         this.cidade = cidade;
     }
@@ -27,8 +27,8 @@ public class Pessoa {
         return nome;
     }
 
-    public String getSobreNome() {
-        return sobreNome;
+    public String getSobrenome() {
+        return sobrenome;
     }
 
     public int getIdade() {
