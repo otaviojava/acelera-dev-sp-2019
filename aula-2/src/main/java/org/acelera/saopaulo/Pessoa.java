@@ -15,7 +15,7 @@ public class Pessoa {
     private String cidade;
 
 
-    Pessoa(String nome, String sobreNome, int idade, String cidade) {
+    protected Pessoa(String nome, String sobreNome, int idade, String cidade) {
         this.nome = nome;
         this.sobreNome = sobreNome;
         this.idade = idade;
