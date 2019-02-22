@@ -15,13 +15,13 @@ public class PiadaServiceImpl implements PiadasService{
     @Override
     public PerguntaResposta getPerguntasRespostasRandom() {
         Long count = perguntasRespostasrepository.count();
-        return perguntasRespostasrepository.findById(randomIndex(count)).get();
+        return perguntasRespostasrepository.findById(randomIndex(count)).orElseThrow(NullPointerException::new);
     }
 
     @Override
     public Piada getTrocadilhoRandom() {
         Long count = trocadilhoRepository.count();
-        return trocadilhoRepository.findById(randomIndex(count)).get();
+        return trocadilhoRepository.findById(randomIndex(count)).orElseThrow(NullPointerException::new);
     }
 
     private Long randomIndex(Long rightLimit) {

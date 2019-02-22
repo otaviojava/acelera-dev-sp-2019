@@ -8,6 +8,8 @@ INSERT INTO PERGUNTAS_RESPOSTAS (ID, PERGUNTA, RESPOSTA) VALUES (7, 'Qual a marc
 INSERT INTO PERGUNTAS_RESPOSTAS (ID, PERGUNTA, RESPOSTA) VALUES (8, 'Qual a comida que liga e desliga ?', 'Strong-ON-OFF');
 INSERT INTO PERGUNTAS_RESPOSTAS (ID, PERGUNTA, RESPOSTA) VALUES (9, 'Porque no quartel não tem problemas de luz ?', 'Pq lá, todo cabo é soldado');
 INSERT INTO PERGUNTAS_RESPOSTAS (ID, PERGUNTA, RESPOSTA) VALUES (10, 'Qual cavalo é gangster ?', 'Al Capônei');
+INSERT INTO PERGUNTAS_RESPOSTAS (ID, PERGUNTA, RESPOSTA) VALUES (11, 'O que é um bolo na academia ?', 'Um brownie builder');
+
 
 INSERT INTO TROCADILHO (ID, TROCADILHO) VALUES (1, 'O super homem é bem forte, o batman ben afleck');
 INSERT INTO TROCADILHO (ID, TROCADILHO) VALUES (2, 'Eu falo por Skype. E o Fábio Porchat');
