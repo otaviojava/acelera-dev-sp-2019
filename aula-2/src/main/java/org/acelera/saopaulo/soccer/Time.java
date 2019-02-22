@@ -1,5 +1,8 @@
 package org.acelera.saopaulo.soccer;
 
+import static java.util.Objects.requireNonNull;
+import static java.util.stream.Collectors.groupingBy;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -7,9 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static java.util.Objects.requireNonNull;
-import static java.util.stream.Collectors.groupingBy;
 
 public class Time {
 
@@ -67,10 +67,13 @@ public class Time {
     }
     
     public boolean removeJogador(String nome) {			
-		if (this.jogadores.indexOf(nome) != -1) {
-			throw new  RuntimeException("Jogadores nao existe no time.");
-		}		
 		return jogadores.removeIf(j -> j.getNome().equals(nome));
 	}
-    
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Time [nome=").append(nome).append(", jogadores=").append(jogadores).append("]");
+		return builder.toString();
+	}
 }
