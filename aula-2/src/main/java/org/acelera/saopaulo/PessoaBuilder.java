@@ -1,39 +1,43 @@
 package org.acelera.saopaulo;
 
+import java.util.Objects;
+
 public class PessoaBuilder {
 
-    @SuppressWarnings("unused")
 	private String nome;
 
-    @SuppressWarnings("unused")
-	private String sobreNome;
+	private String sobrenome;
 
-    @SuppressWarnings("unused")
 	private int idade;
 
-    @SuppressWarnings("unused")
 	private String cidade;
 
-    PessoaBuilder() {
-    }
+    protected PessoaBuilder() {}
 
-    public PessoaBuilder setNome(String nome) {
+    public PessoaBuilder withNome(String nome) {
+    	Objects.requireNonNull(nome, "nome não pode ser null");
         this.nome = nome;
         return this;
     }
 
-    public PessoaBuilder setSobreNome(String sobreNome) {
-        this.sobreNome = sobreNome;
+    public PessoaBuilder withSobreNome(String sobrenome) {
+        Objects.requireNonNull(sobrenome, "sobrenome não pode ser null");
+    	this.sobrenome = sobrenome;
         return this;
     }
 
-    public PessoaBuilder setIdade(int idade) {
+    public PessoaBuilder withIdade(int idade) {
         this.idade = idade;
         return this;
     }
 
-    public PessoaBuilder setCidade(String cidade) {
+    public PessoaBuilder withCidade(String cidade) {
+    	Objects.requireNonNull(cidade, "cidade não pode ser null");
         this.cidade = cidade;
         return this;
+    }
+    
+    public Pessoa build() {
+    	return new Pessoa(nome, sobrenome, idade, cidade);
     }
 }
