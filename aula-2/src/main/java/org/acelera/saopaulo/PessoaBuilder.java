@@ -2,13 +2,17 @@ package org.acelera.saopaulo;
 
 public class PessoaBuilder {
 
-    private String nome;
+    @SuppressWarnings("unused")
+	private String nome;
 
-    private String sobreNome;
+    @SuppressWarnings("unused")
+	private String sobreNome;
 
-    private int idade;
+    @SuppressWarnings("unused")
+	private int idade;
 
-    private String cidade;
+    @SuppressWarnings("unused")
+	private String cidade;
 
     PessoaBuilder() {
     }

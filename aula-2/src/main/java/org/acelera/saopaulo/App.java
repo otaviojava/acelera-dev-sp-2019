@@ -2,7 +2,8 @@ package org.acelera.saopaulo;
 
 public class App {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("static-access")
+	public static void main(String[] args) {
         PiadaRuim piadaRuim = new PiadaRuim();
         System.out.println(piadaRuim.contar());
         piadaRuim.variavel = "novo valor";

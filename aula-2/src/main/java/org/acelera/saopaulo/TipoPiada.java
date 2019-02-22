@@ -1,7 +1,5 @@
 package org.acelera.saopaulo;
 
-import java.util.function.Supplier;
-
 public enum  TipoPiada implements ReacaoPiada {
     RUIM{
         @Override
