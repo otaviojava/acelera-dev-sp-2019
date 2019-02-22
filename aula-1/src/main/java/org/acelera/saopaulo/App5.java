@@ -1,13 +1,10 @@
 package org.acelera.saopaulo;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class App5 {
 
@@ -25,19 +22,22 @@ public class App5 {
         Predicate<Pessoa> maiorFiltro = p -> p.getIdade() > 18;
         Predicate<Pessoa> ehSalvador = p -> "Salvador".equals(p.getCidade());
 
+		@SuppressWarnings(value = { "unused" })
         List<Pessoa> maior = bancada.stream()
                 .filter(maiorFiltro.or(ehSalvador))
                 .collect(Collectors.toList());
 
+		@SuppressWarnings(value = { "unused" })
         List<String> nomes = bancada.stream()
                 .map(p -> p.getNome())
                 .collect(Collectors.toList());
 
+		@SuppressWarnings(value = { "unused" })
         String nomesVirgula = bancada.stream()
                 .map(p -> p.getNome())
                 .collect(Collectors.joining(","));
 
-
+		@SuppressWarnings(value = { "unused" })
         int sum = bancada.stream()
                 .mapToInt(p -> p.getIdade()).sum();
 
@@ -46,6 +46,7 @@ public class App5 {
                 .reduce((a, b) -> Integer.sum(a, b));
 
         if(reduce.isPresent()) {
+			@SuppressWarnings(value = { "unused" })
             Integer somatorio = reduce.get();
         }
 
