@@ -15,9 +15,6 @@ public class App4 {
         estoque.put("Cerveja", 20);
         estoque.put("Vinho Seco vermelho", 1);
 
-        //consumir duas bananas
-        //consumir 3 meloes
-        //consumir 9 coca-colas
         System.out.println("quantidade de banana: " +
                 estoque.get("Banana"));
 
