@@ -1,5 +1,6 @@
 package org.acelera.saopaulo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,9 +21,12 @@ import java.util.concurrent.atomic.AtomicLong;
 public class HelloWorldController {
 
     private static final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
 
-    private Map<Long, Greeting> storage = new HashMap<>();
+    @Autowired
+    private AtomicLong counter;
+
+    @Autowired
+    private Storage storage;
 
     @GetMapping
     @ResponseBody
@@ -43,7 +47,7 @@ public class HelloWorldController {
 
     @PutMapping(value = "/{id}", produces = "application/json")
     public Greeting update(@PathVariable long id, @RequestBody Greeting greeting) {
-        return storage.computeIfPresent(id, (k,v) -> greeting);
+        return storage.update(id, greeting);
     }
 
 
