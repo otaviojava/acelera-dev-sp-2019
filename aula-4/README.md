@@ -3,73 +3,34 @@
 ## Grade
 
 1. Orientação a Objetos com Java
-   - Camadas
-   - Classe abstrata
-   - Package by feature vs Package by layer
+   - Padrões de Projeto
+   - SOLID
    
-2. Rest 
-   - Spring Rest
-   - Injeção de dependência
+2. NoSQL
+   - MongoDB
+   - Redis
 
-
-3. Spring
-   - Injeção de dependência
-   - Motivação
-
-4. Bancos de dados
-   - JPA
-   - Realizando Query
-   - Repository
-   - Repository vs RestController
 
    
-## Docker
-Criar containers com os bancos de dados (MongoDB e MySQL) :
-```
-docker-compose up --build
-```
-
-Criar o container de apenas um dos serviços:
-```
-docker-compose up <nome do serviço>
-
-exemplo:
-docker-compose up mysqldb
-docker-compose up mongodb
-  ```
-Outros comandos úteis do Docker :
-```
-docker container ls                                # Lista todos os containers rodando
-docker container ls -a                             # Lista todos os containers, mesmo o que não estão rodando
-docker container stop <hash>                       # Para a execução do container
-docker container rm <hash>                         # Remove o container da máquina
-docker container rm $(docker container ls -a -q)   # Remove todos os containers
-docker image ls -a                                 # Lista todas as imagens da máquina
-docker image rm <image id>                         # Remove uma imagem da máquina
-docker image rm $(docker image ls -a -q)           # Remove todas as imagens da máquina
-```
-
 ## Exercícios
 
-* Criar recurso para Jogadores de Football
-* Criar recurso para o controle de estoque
-* Realizar a modelagem dos Jogadores de Football no banco de dados
-* Realizar a modelagem dos Jogadores de controle de estoque
+* Criar recurso para Jogadores de Football migrando para o  MongoDB
+* Criar recurso para o controle de estoque  migrando para o  MongoDB
+* Gerenciar uma pilha de processo
+* Criar um sistema de campeonato Brasileiro
+
 
 
 Referências:
 
-* [Getting Started With Spring Boot and Microservices](https://dzone.com/refcardz/getting-started-with-spring-boot-and-microservices?chapter=1)
-* [Injeção de dependências com Spring](https://blog.algaworks.com/injecao-de-dependencias-com-spring/)
-* [Spring MVC Caelum](https://www.caelum.com.br/apostila-java-web/spring-mvc/)
-* [Spring Boot](https://www.casadocodigo.com.br/products/livro-spring-boot)
-* [Spring MVC](https://www.casadocodigo.com.br/products/livro-spring-mvc)
-* [Vire o jogo com Spring Framework](https://www.casadocodigo.com.br/products/livro-spring-framework)
-* [10 Best Practices for Better RESTful API](https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
-* [RESTful API Designing guidelines — The best practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [The Spring @Controller and @RestController Annotations](https://www.baeldung.com/spring-controller-vs-restcontroller)
-* [Bancos de Dados Relacionais](https://www.devmedia.com.br/bancos-de-dados-relacionais/20401)
-* [Bancos de dados e JDBC](https://www.caelum.com.br/apostila-java-web/bancos-de-dados-e-jdbc/#a-conexo-em-java)
+* [Introdução aos bancos de dados NoSQL](https://www.devmedia.com.br/introducao-aos-bancos-de-dados-nosql/26044)
+* [Making Graph Databases Fun Again With Java](https://dzone.com/articles/have-a-fun-moment-with-graph-and-java)
+* [Spring Data MongoDB 2.1.5](https://spring.io/projects/spring-data-mongodb)
+* [MongoDB](https://www.casadocodigo.com.br/products/livro-mongodb)
+* [Armazenando dados com Redis](https://www.casadocodigo.com.br/products/livro-redis)
+* [Crie aplicações mais rápidas utilizando Redis](https://imasters.com.br/devsecops/crie-aplicacoes-mais-rapidas-utilizando-redis)
+* [Core Design Principles for Software Developers by Venkat Subramaniam](https://www.youtube.com/watch?v=llGgO74uXMI)
+* [SOLID são princípios ou boas práticas da programação orientada a objetos, e podem ser aplicados a qualquer linguagem de programação.](https://medium.com/thiago-aragao/solid-princ%C3%ADpios-da-programa%C3%A7%C3%A3o-orientada-a-objetos-ba7e31d8fb25)
+* [S.O.L.I.D: The First 5 Principles of Object Oriented Design](https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+* [Spring Data Redis](https://spring.io/projects/spring-data-redis)
 
