@@ -1,8 +1,22 @@
 package org.acelera.saopaulo.soccer;
 
-import static org.acelera.saopaulo.soccer.Posicao.ATAQUE;
-import static org.acelera.saopaulo.soccer.Posicao.DEFESA;
-import static org.acelera.saopaulo.soccer.Posicao.GOLEIRO;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import org.acelera.saopaulo.soccer.domain.Jogador;
+import org.acelera.saopaulo.soccer.domain.Posicao;
+import org.acelera.saopaulo.soccer.domain.Time;
+import org.hamcrest.Matcher;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import static org.acelera.saopaulo.soccer.domain.Posicao.ATAQUE;
+import static org.acelera.saopaulo.soccer.domain.Posicao.DEFESA;
+import static org.acelera.saopaulo.soccer.domain.Posicao.GOLEIRO;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
@@ -21,17 +35,6 @@ import static org.junit.jupiter.api.Assertions.assertNotSame;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
-import org.hamcrest.Matcher;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 
 class TimeTest {
