@@ -26,4 +26,6 @@ Referências:
 * [Spring Data MongoDB 2.1.5](https://spring.io/projects/spring-data-mongodb)
 * [MongoDB](https://www.casadocodigo.com.br/products/livro-mongodb)
 * [Armazenando dados com Redis](https://www.casadocodigo.com.br/products/livro-redis)
+* [Crie aplicações mais rápidas utilizando Redis](https://imasters.com.br/devsecops/crie-aplicacoes-mais-rapidas-utilizando-redis)
+
 
