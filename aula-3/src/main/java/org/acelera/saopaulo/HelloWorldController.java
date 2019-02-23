@@ -8,12 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
@@ -27,12 +23,6 @@ public class HelloWorldController {
 
     @Autowired
     private Storage storage;
-
-    @GetMapping
-    @ResponseBody
-    public Greeting sayHello(@RequestParam(name = "name", required = false, defaultValue = "Stranger") String name) {
-        return new Greeting(counter.incrementAndGet(), String.format(template, name));
-    }
 
     @PostMapping
     public String save(@RequestBody Greeting greeting) {
