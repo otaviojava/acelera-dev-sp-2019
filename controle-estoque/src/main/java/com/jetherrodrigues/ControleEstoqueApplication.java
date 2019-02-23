@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
+/**
+ * 
+ * @author jether.rodrigues
+ *
+ */
 @SpringBootApplication
 @EntityScan(basePackages = {
 		"com.jetherrodrigues.domain"

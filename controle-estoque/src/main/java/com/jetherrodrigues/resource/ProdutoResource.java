@@ -21,6 +21,11 @@ import com.jetherrodrigues.exception.ProdutoNotFoundException;
 import com.jetherrodrigues.response.MessageResponse;
 import com.jetherrodrigues.service.ProdutoGenericService;
 
+/**
+ * 
+ * @author jether.rodrigues
+ *
+ */
 @RestController
 @RequestMapping(value = "v1/produto")
 public class ProdutoResource implements Serializable {

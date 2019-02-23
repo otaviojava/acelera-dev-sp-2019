@@ -11,6 +11,11 @@ import org.springframework.stereotype.Service;
 import com.jetherrodrigues.domain.Produto;
 import com.jetherrodrigues.repository.ProdutoRepository;
 
+/**
+ * 
+ * @author jether.rodrigues
+ *
+ */
 @Service
 public class ProdutoService implements ProdutoGenericService {
 
