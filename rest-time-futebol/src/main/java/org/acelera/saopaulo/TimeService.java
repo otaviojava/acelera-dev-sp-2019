@@ -32,7 +32,15 @@ public class TimeService {
                 .collect(Collectors.toList());
     }
 
-    public Map<Posicao, List<Jogador>> getJogadoresPorPosicao(Long id, String posicao){
+    public Map<Posicao, List<Jogador>> getJogadoresPorPosicao(Long id, Posicao posicao){
+        return timeRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .getJogadores().stream()
+                .filter(f -> f.getPosicao().equals(posicao))
+                .collect(groupingBy(Jogador::getPosicao));
+    }
+
+    public Map<Posicao, List<Jogador>> getJogadoresPorPosicao(Long id){
         return timeRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
                 .getJogadores().stream()

@@ -29,8 +29,13 @@ public class TimeController {
         return timeService.getJogadoresFantastico(id);
     }
 
+    @GetMapping(value = "/{id}/posicao", produces = "application/json")
+    public Map<Posicao, List<Jogador>> posicao(@PathVariable Long id){
+        return timeService.getJogadoresPorPosicao(id);
+    }
+
     @GetMapping(value = "/{id}/posicao/{posicao}", produces = "application/json")
-    public Map<Posicao, List<Jogador>> posicao(@PathVariable Long id, @PathVariable String posicao){
+    public Map<Posicao, List<Jogador>> posicao(@PathVariable Long id, @PathVariable Posicao posicao){
         return timeService.getJogadoresPorPosicao(id, posicao);
     }
 
