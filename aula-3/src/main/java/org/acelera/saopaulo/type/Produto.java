@@ -1,8 +1,5 @@
 package org.acelera.saopaulo.type;
 
-import java.math.BigDecimal;
-import java.util.Currency;
-
 public class Produto {
 
 
@@ -27,11 +24,4 @@ public class Produto {
         return nome;
     }
 
-    public BigDecimal getValor() {
-        return valor;
-    }
-
-    public Currency getCurrency() {
-        return currency;
-    }
 }
