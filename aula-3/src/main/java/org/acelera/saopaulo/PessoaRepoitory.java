@@ -1,6 +1,6 @@
 package org.acelera.saopaulo;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface PessoaRepoitory extends CrudRepository<Pessoa, String> {
+public interface PessoaRepoitory extends PagingAndSortingRepository<Pessoa, String> {
 }
