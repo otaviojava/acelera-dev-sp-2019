@@ -1,9 +1,9 @@
-package org.acelera.saopaulo.futebol.controller;
+package org.acelera.saopaulo.soccer.controller;
 
-import org.acelera.saopaulo.futebol.Posicao;
-import org.acelera.saopaulo.futebol.dto.JogadorDto;
-import org.acelera.saopaulo.futebol.dto.TimeDto;
-import org.acelera.saopaulo.futebol.service.TimeService;
+import org.acelera.saopaulo.soccer.Posicao;
+import org.acelera.saopaulo.soccer.dto.JogadorDto;
+import org.acelera.saopaulo.soccer.dto.TimeDto;
+import org.acelera.saopaulo.soccer.service.TimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

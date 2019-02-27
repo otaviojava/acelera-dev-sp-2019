@@ -1,7 +1,7 @@
-package org.acelera.saopaulo.futebol.builder;
+package org.acelera.saopaulo.soccer.builder;
 
-import org.acelera.saopaulo.futebol.dto.JogadorDto;
-import org.acelera.saopaulo.futebol.entity.Jogador;
+import org.acelera.saopaulo.soccer.dto.JogadorDto;
+import org.acelera.saopaulo.soccer.entity.Jogador;
 
 public class JogadorDtoBuilder {
 

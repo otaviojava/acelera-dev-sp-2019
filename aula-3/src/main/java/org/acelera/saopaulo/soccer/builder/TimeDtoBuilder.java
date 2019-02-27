@@ -1,7 +1,7 @@
-package org.acelera.saopaulo.futebol.builder;
+package org.acelera.saopaulo.soccer.builder;
 
-import org.acelera.saopaulo.futebol.dto.TimeDto;
-import org.acelera.saopaulo.futebol.entity.Time;
+import org.acelera.saopaulo.soccer.dto.TimeDto;
+import org.acelera.saopaulo.soccer.entity.Time;
 
 public class TimeDtoBuilder {
 

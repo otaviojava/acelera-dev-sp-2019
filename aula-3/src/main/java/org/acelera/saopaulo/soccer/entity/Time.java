@@ -1,4 +1,4 @@
-package org.acelera.saopaulo.futebol.entity;
+package org.acelera.saopaulo.soccer.entity;
 
 import javax.persistence.*;
 import java.util.*;

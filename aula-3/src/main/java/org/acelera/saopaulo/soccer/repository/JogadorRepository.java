@@ -1,6 +1,6 @@
-package org.acelera.saopaulo.futebol.repository;
+package org.acelera.saopaulo.soccer.repository;
 
-import org.acelera.saopaulo.futebol.entity.Jogador;
+import org.acelera.saopaulo.soccer.entity.Jogador;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

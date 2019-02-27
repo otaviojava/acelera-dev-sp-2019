@@ -1,10 +1,10 @@
-package org.acelera.saopaulo.futebol.service;
+package org.acelera.saopaulo.soccer.service;
 
-import org.acelera.saopaulo.futebol.builder.JogadorDtoBuilder;
-import org.acelera.saopaulo.futebol.dto.JogadorDto;
-import org.acelera.saopaulo.futebol.entity.Jogador;
-import org.acelera.saopaulo.futebol.repository.JogadorRepository;
-import org.acelera.saopaulo.futebol.repository.TimeRepository;
+import org.acelera.saopaulo.soccer.builder.JogadorDtoBuilder;
+import org.acelera.saopaulo.soccer.dto.JogadorDto;
+import org.acelera.saopaulo.soccer.entity.Jogador;
+import org.acelera.saopaulo.soccer.repository.JogadorRepository;
+import org.acelera.saopaulo.soccer.repository.TimeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

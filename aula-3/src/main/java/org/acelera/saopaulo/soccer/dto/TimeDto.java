@@ -1,4 +1,4 @@
-package org.acelera.saopaulo.futebol.dto;
+package org.acelera.saopaulo.soccer.dto;
 
 import java.util.ArrayList;
 import java.util.List;

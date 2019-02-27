@@ -1,30 +1,20 @@
-package org.acelera.saopaulo.futebol.entity;
+package org.acelera.saopaulo.soccer.dto;
 
-import org.acelera.saopaulo.futebol.Posicao;
+import org.acelera.saopaulo.soccer.Posicao;
 
-import javax.persistence.*;
+public class JogadorDto {
 
-@Entity
-public class Jogador {
-
-    @Id
     private String nome;
 
-    @Column
     private String cidade;
 
-    @Column
     private String pais;
 
-    @Column
     private Posicao posicao;
 
-    @Column
     private int gols;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "time")
-    private Time time;
+    private String time;
 
     public String getNome() {
         return nome;
@@ -66,11 +56,11 @@ public class Jogador {
         this.gols = gols;
     }
 
-    public Time getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(String time) {
         this.time = time;
     }
 }

@@ -1,4 +1,4 @@
-package org.acelera.saopaulo.futebol;
+package org.acelera.saopaulo.soccer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
