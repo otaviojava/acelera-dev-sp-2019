@@ -28,13 +28,15 @@ public class JogadorService {
         novoJogador.setPais(jogadorDto.getPais());
         novoJogador.setPosicao(jogadorDto.getPosicao());
         novoJogador.setGols(jogadorDto.getGols());
-        novoJogador.setTime(timeRepository.findById(jogadorDto.getTime()).orElseThrow(() -> new EntityNotFoundException("Time nao encontrado")));
+        novoJogador.setTime(timeRepository.findById(jogadorDto.getTime())
+                .orElseThrow(() -> new EntityNotFoundException("Time nao encontrado")));
         jogadorRepository.save(novoJogador);
     }
 
     public JogadorDto getJogador(String nome) {
         return JogadorDtoBuilder.buildFromEntity(
-                jogadorRepository.findById(nome).orElseThrow(() -> new EntityNotFoundException("Jogador nao encontrado"))
+                jogadorRepository.findById(nome)
+                        .orElseThrow(() -> new EntityNotFoundException("Jogador nao encontrado"))
         );
     }
 
@@ -44,9 +46,23 @@ public class JogadorService {
 
     public List<JogadorDto> getJogadores() {
         List<JogadorDto> jogadores = new ArrayList<>();
-        jogadorRepository.findAll().forEach(j -> {
-            jogadores.add(JogadorDtoBuilder.buildFromEntity(j));
-        });
+        jogadorRepository.findAll().forEach(j -> jogadores.add(JogadorDtoBuilder.buildFromEntity(j)));
         return jogadores;
+    }
+
+    public JogadorDto atualizaJogador(String nome, JogadorDto jogadorDto) {
+        Jogador jogador = jogadorRepository.findById(nome)
+                .orElseThrow(() -> new EntityNotFoundException("Jogador nao encontrado"));
+        jogador.setNome(jogadorDto.getNome());
+        jogador.setCidade(jogadorDto.getCidade());
+        jogador.setGols(jogadorDto.getGols());
+        jogador.setPais(jogadorDto.getPais());
+        jogador.setPosicao(jogadorDto.getPosicao());
+        jogador.setTime(timeRepository.findById(jogadorDto.getTime())
+                .orElseThrow(() -> new EntityNotFoundException("Time nao encontrado")));
+
+        return JogadorDtoBuilder.buildFromEntity(
+                jogadorRepository.save(jogador)
+        );
     }
 }

@@ -14,9 +14,14 @@ public class JogadorController {
     @Autowired
     private JogadorService jogadorService;
 
-    @PostMapping
+    @PostMapping("/adiciona")
     public void adicionaJogador(@RequestBody JogadorDto jogadorDto) {
         jogadorService.adicionaJogador(jogadorDto);
+    }
+
+    @PutMapping("/{nome}")
+    public JogadorDto atualizaJogador(@PathVariable String nome, @RequestBody JogadorDto jogadorDto) {
+        return jogadorService.atualizaJogador(nome, jogadorDto);
     }
 
     @GetMapping("/{nome}")
