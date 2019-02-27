@@ -1,4 +1,4 @@
-package org.acelera.saopaulo.soccer;
+package org.acelera.saopaulo.futebol;
 
 public class JogadorBuilder {
     private String nome;

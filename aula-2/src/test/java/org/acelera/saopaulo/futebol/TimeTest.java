@@ -1,8 +1,8 @@
-package org.acelera.saopaulo.soccer;
+package org.acelera.saopaulo.futebol;
 
-import static org.acelera.saopaulo.soccer.Posicao.ATAQUE;
-import static org.acelera.saopaulo.soccer.Posicao.DEFESA;
-import static org.acelera.saopaulo.soccer.Posicao.GOLEIRO;
+import static org.acelera.saopaulo.futebol.Posicao.ATAQUE;
+import static org.acelera.saopaulo.futebol.Posicao.DEFESA;
+import static org.acelera.saopaulo.futebol.Posicao.GOLEIRO;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;

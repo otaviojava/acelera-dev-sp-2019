@@ -1,4 +1,4 @@
-package org.acelera.saopaulo.soccer;
+package org.acelera.saopaulo.futebol;
 
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.groupingBy;
