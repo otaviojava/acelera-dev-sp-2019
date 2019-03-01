@@ -40,6 +40,9 @@ public class TimeService {
     }
 
     public TimeDto atualizaTime(String nome, TimeDto timeDto) {
+        //Verifica se o  time existe antes de atualizar
+        getTime(nome);
+
         Time time = timeRepository.findById(nome).orElseThrow(() -> new EntityNotFoundException(TIME_NAO_ENCONTRADO));
         time.setNome(timeDto.getNome());
         return TimeDtoBuilder.buildFromEntity(timeRepository.save(time));
@@ -52,6 +55,8 @@ public class TimeService {
     }
 
     public void removeTime(String nome) {
+        //Verifica se o  time existe antes de remover
+        getTime(nome);
         timeRepository.deleteById(nome);
     }
 

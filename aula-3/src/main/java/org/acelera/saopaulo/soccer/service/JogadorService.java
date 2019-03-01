@@ -22,15 +22,22 @@ public class JogadorService {
     private TimeRepository timeRepository;
 
     public void adicionaJogador(JogadorDto jogadorDto) {
-        Jogador novoJogador = new Jogador();
-        novoJogador.setNome(jogadorDto.getNome());
-        novoJogador.setCidade(jogadorDto.getCidade());
-        novoJogador.setPais(jogadorDto.getPais());
-        novoJogador.setPosicao(jogadorDto.getPosicao());
-        novoJogador.setGols(jogadorDto.getGols());
-        novoJogador.setTime(timeRepository.findById(jogadorDto.getTime())
-                .orElseThrow(() -> new EntityNotFoundException("Time nao encontrado")));
-        jogadorRepository.save(novoJogador);
+        // Verificar se jogador ja existe antes de adicionar
+        try{
+            getJogador(jogadorDto.getNome());
+            throw new IllegalArgumentException("Tentando adicionar Jogador que já existe");
+
+        }catch (EntityNotFoundException e){
+            Jogador novoJogador = new Jogador();
+            novoJogador.setNome(jogadorDto.getNome());
+            novoJogador.setCidade(jogadorDto.getCidade());
+            novoJogador.setPais(jogadorDto.getPais());
+            novoJogador.setPosicao(jogadorDto.getPosicao());
+            novoJogador.setGols(jogadorDto.getGols());
+            novoJogador.setTime(timeRepository.findById(jogadorDto.getTime())
+                    .orElseThrow(() -> new EntityNotFoundException("Time nao encontrado")));
+            jogadorRepository.save(novoJogador);
+        }
     }
 
     public JogadorDto getJogador(String nome) {
@@ -41,6 +48,9 @@ public class JogadorService {
     }
 
     public void removeJogador(String nome) {
+        //Verificar se jogador existe antes de deletar
+        getJogador(nome);
+
         jogadorRepository.deleteById(nome);
     }
 
@@ -51,6 +61,9 @@ public class JogadorService {
     }
 
     public JogadorDto atualizaJogador(String nome, JogadorDto jogadorDto) {
+        //Verificar se jogador existe antes de atualizar
+        getJogador(nome);
+
         Jogador jogador = jogadorRepository.findById(nome)
                 .orElseThrow(() -> new EntityNotFoundException("Jogador nao encontrado"));
         jogador.setNome(jogadorDto.getNome());
