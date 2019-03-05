@@ -1,8 +1,6 @@
 package org.acelera.saopaulo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
-import org.springframework.stereotype.Component;
+import static java.util.stream.Collectors.groupingBy;
 
 import java.util.Comparator;
 import java.util.List;
@@ -10,7 +8,9 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collectors.groupingBy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.ResourceNotFoundException;
+import org.springframework.stereotype.Component;
 
 @Component
 public class TimeService {
@@ -20,13 +20,13 @@ public class TimeService {
 
     public int getTotalDeJogadores(Long id){
         return timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().size();
     }
 
     public List<Jogador> getJogadoresFantastico(Long id){
         return timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().stream()
                 .filter(j -> j.getGols()>= 3)
                 .collect(Collectors.toList());
@@ -34,7 +34,7 @@ public class TimeService {
 
     public Map<Posicao, List<Jogador>> getJogadoresPorPosicao(Long id, Posicao posicao){
         return timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().stream()
                 .filter(f -> f.getPosicao().equals(posicao))
                 .collect(groupingBy(Jogador::getPosicao));
@@ -42,7 +42,7 @@ public class TimeService {
 
     public Map<Posicao, List<Jogador>> getJogadoresPorPosicao(Long id){
         return timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().stream()
                 .collect(groupingBy(Jogador::getPosicao));
     }
@@ -51,17 +51,18 @@ public class TimeService {
         Comparator<Jogador> maiorGols = Comparator.comparing(Jogador::getGols);
         Comparator<Jogador> peloNome= Comparator.comparing(Jogador::getNome);
         Optional<Jogador> artilheiro = timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+                .orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().stream()
                 .max(maiorGols.thenComparing(peloNome));
 
         return artilheiro
-                .orElseThrow(() -> new IllegalStateException("Sempre deve ter um artilheiro no time"));
+                .orElseThrow(() -> new IllegalStateException("O serviço não pôde determinar um artilheiro para o Time "
+						+ id + ". Considere contatar o administrador do serviço"));
     }
 
     public List<Jogador> getJogadoresOrdenadosPorGols(Long id){
         return timeRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Resource not found. Time não encontrado."))
+				.orElseThrow(() -> new ResourceNotFoundException("Não foi encontrado um Time com id " + id))
                 .getJogadores().stream()
                 .sorted(Comparator.comparing(Jogador::getGols).reversed())
                 .collect(Collectors.toList());
