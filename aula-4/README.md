@@ -8,16 +8,18 @@
    
 2. NoSQL
    - MongoDB
-   - Redis
 
+![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
 
+ `docker run -d --name mongodb-instance -p 27017:27017 mongo`
+ 
    
 ## Exercícios
 
 * Criar recurso para Jogadores de Football migrando para o  MongoDB
 * Criar recurso para o controle de estoque  migrando para o  MongoDB
-* Gerenciar uma pilha de processo
 * Criar um sistema de campeonato Brasileiro
+
 
 
 
