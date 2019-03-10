@@ -7,7 +7,7 @@ public class Advogado extends BaseTrabalhador {
     }
 
     @Override
-    protected String getSalario() {
+    public String getSalario() {
         return "espera o processo pq causa esta ganha";
     }
 

@@ -7,7 +7,7 @@ public class Programdor extends BaseTrabalhador {
     }
 
     @Override
-    protected String getSalario() {
+    public String getSalario() {
         return "banana";
     }
 
